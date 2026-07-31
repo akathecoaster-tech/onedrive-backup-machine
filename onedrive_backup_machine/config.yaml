@@ -1,0 +1,35 @@
+name: OneDrive Backup Machine
+version: "1.0.0"
+slug: onedrive_backup_machine
+description: Download selected OneDrive folders to local storage on a schedule, with job history and a local API for Home Assistant.
+url: https://github.com/augleao/onedrive-backup-machine
+arch:
+  - aarch64
+  - amd64
+  - armv7
+init: false
+startup: application
+boot: auto
+ingress: true
+ingress_port: 8080
+panel_icon: mdi:microsoft-onedrive
+panel_title: OneDrive Backup Machine
+ports:
+  8080/tcp: 8080
+ports_description:
+  8080/tcp: Local API and web UI (used by the HACS integration)
+map:
+  - type: share
+    read_only: false
+  - type: media
+    read_only: false
+  - type: addon_config
+    read_only: false
+options:
+  client_id: ""
+  backup_root: /share/onedrive_backup_machine
+  listen_port: 8080
+schema:
+  client_id: str
+  backup_root: str
+  listen_port: port

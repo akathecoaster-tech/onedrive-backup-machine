@@ -1,0 +1,9 @@
+build_from:
+  aarch64: ghcr.io/home-assistant/aarch64-base-python:3.12-alpine3.20
+  amd64: ghcr.io/home-assistant/amd64-base-python:3.12-alpine3.20
+  armv7: ghcr.io/home-assistant/armv7-base-python:3.12-alpine3.20
+labels:
+  org.opencontainers.image.title: "OneDrive Backup Machine"
+  org.opencontainers.image.description: "Local scheduled backups of OneDrive folders for Home Assistant"
+  org.opencontainers.image.source: "https://github.com/augleao/onedrive-backup-machine"
+  org.opencontainers.image.licenses: "MIT"
