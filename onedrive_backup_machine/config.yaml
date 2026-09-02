@@ -1,5 +1,5 @@
 name: OneDrive Backup Machine (Fixed)
-version: "1.0.1"
+version: "1.0.2"
 slug: onedrive_backup_machine_fixed
 description: Download selected OneDrive folders to local storage on a schedule, with job history and a local API for Home Assistant.
 url: https://github.com/akathecoaster-tech/onedrive-backup-machine
