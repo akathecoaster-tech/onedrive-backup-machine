@@ -14,7 +14,7 @@ from token_cache import FileTokenCache
 _LOGGER = logging.getLogger(__name__)
 
 GRAPH_ROOT = "https://graph.microsoft.com/v1.0"
-SCOPES = ["Files.Read.All", "User.Read", "offline_access"]
+SCOPES = ["Files.Read.All", "User.Read"]
 
 
 class OneDriveClient:
