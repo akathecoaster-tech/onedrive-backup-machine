@@ -1,5 +1,8 @@
 async function api(path, options = {}) {
-  const response = await fetch(path, {
+  // Keep API requests relative to the current page so they work both through
+  // Home Assistant Ingress and when the add-on is opened directly on :8080.
+  const requestPath = path.replace(/^\/+/, "");
+  const response = await fetch(requestPath, {
     headers: { "Content-Type": "application/json", ...(options.headers || {}) },
     ...options,
   });
